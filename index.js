@@ -34,7 +34,7 @@ class ColorBox extends React.Component {
         let styles = {
             display: 'inline-flex',
             width: '20vw',
-            height: '100vh',
+            height: '25vh',
             backgroundColor: `${this.state.hexCode}`,
             cursor: 'pointer',
             alignItems: 'center',
@@ -62,4 +62,16 @@ class ColorRow extends React.Component {
     }
 }
 
-ReactDOM.render(<ColorRow />, document.getElementById('root'))
+class ColorGrid extends React.Component {
+
+    render = () => {
+        return <div>
+            <ColorRow />
+            <ColorRow />
+            <ColorRow />
+            <ColorRow />
+        </div>
+    }
+}
+
+ReactDOM.render(<ColorGrid />, document.getElementById('root'))
