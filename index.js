@@ -45,7 +45,7 @@ class ColorBox extends React.Component {
             color: 'white'
         }
         if (this.state.isLocked){iconStyle.color = 'rgba(255,255,255,0.75)'} else {iconStyle.color = 'transparent'}
-        return <div style={styles} onClick={this.lockBox}><i style={iconStyle} className="fas fa-lock"></i></div>
+        return <div style={styles} onMouseDown={this.lockBox}><i style={iconStyle} className="fas fa-lock"></i></div>
     }
 }
 
