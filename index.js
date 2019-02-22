@@ -10,7 +10,7 @@ class ColorBox extends React.Component {
     randomize = () => {
         let intervalId = setInterval(() => {
             this.setState({
-                hexCode: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                hexCode: 'hsl('+ Math.floor(Math.random() * 360).toString(16)+',50%,70%)',
                 isLocked: false,
                 intervalId: intervalId
             })
