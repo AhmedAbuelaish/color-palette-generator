@@ -10,7 +10,7 @@ class ColorBox extends React.Component {
     randomize = () => {
         let intervalId = setInterval(() => {
             this.setState({
-                hexCode: 'hsl('+ Math.floor(Math.random() * 360).toString(16)+',50%,100%)',
+                hexCode: 'hsl('+ Math.floor(Math.random() * 360).toString(16)+',50%,70%)',
                 isLocked: false,
                 intervalId: intervalId
             })
@@ -46,7 +46,7 @@ class ColorBox extends React.Component {
             color: 'white'
         }
         if (this.state.isLocked){iconStyle.color = 'rgba(255,255,255,0.75)'} else {iconStyle.color = 'transparent'}
-        return <div style={styles} onMouseDown={this.lockBox}><i style={iconStyle} className="fas fa-lock"></i></div>
+        return <div style={styles} onMouseDown={this.lockBox}><i style={iconStyle} className="fas fa-lock">{this.state.hexcode}</i></div>
     }
 }
 
