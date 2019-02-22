@@ -2,7 +2,6 @@
 class ColorBox extends React.Component {
     constructor(props){
         super(props)
-        // let colorArray = colors(1,5)
         let initialState ={}
         this.state = initialState
         this.randomize()
@@ -37,9 +36,16 @@ class ColorBox extends React.Component {
             width: '20vw',
             height: '100vh',
             backgroundColor: `${this.state.hexCode}`,
-            cursor: 'pointer'
+            cursor: 'pointer',
+            alignItems: 'center',
+            justifyContent: 'center'
         }
-        return <div style={styles} onClick={this.lockBox}/>
+        let iconStyle = {
+            fontSize: '24px',
+            color: 'white'
+        }
+        if (this.state.isLocked){iconStyle.color = 'rgba(255,255,255,0.75)'} else {iconStyle.color = 'transparent'}
+        return <div style={styles} onClick={this.lockBox}><i style={iconStyle} className="fas fa-lock"></i></div>
     }
 }
 
