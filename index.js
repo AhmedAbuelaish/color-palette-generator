@@ -15,7 +15,7 @@ class ColorBox extends React.Component {
                 isLocked: false,
                 intervalId: intervalId
             })
-        },1000)
+        },500)
     }
     
     lockBox = () => {
