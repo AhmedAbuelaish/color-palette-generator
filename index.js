@@ -28,6 +28,7 @@ class ColorBox extends React.Component {
             isLocked: !this.state.isLocked,
             intervalId: this.state.intervalId
         })
+        console.log(this.state.hexcode)
     }
 
     render = () => {
