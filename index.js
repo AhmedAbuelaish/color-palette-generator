@@ -41,7 +41,7 @@ class ColorBox extends React.Component {
             justifyContent: 'center'
         }
         let iconStyle = {
-            fontSize: '24px',
+            fontSize: '36px',
             color: 'white'
         }
         if (this.state.isLocked){iconStyle.color = 'rgba(255,255,255,0.75)'} else {iconStyle.color = 'transparent'}
